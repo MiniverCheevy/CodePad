@@ -1,0 +1,6 @@
+@CodePad.Server_HostAddress = http://localhost:5213
+
+GET {{CodePad.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

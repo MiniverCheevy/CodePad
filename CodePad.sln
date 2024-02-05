@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodePad.Server", "CodePad.Server\CodePad.Server.csproj", "{21E1E6FD-5CC5-4A50-A894-B7ABE85DDFDB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodePad.Shared", "CodePad.Shared\CodePad.Shared.csproj", "{6DB03D5D-B183-46DC-94C8-925A55221BCB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientGenerator", "ClientGenerator\ClientGenerator.csproj", "{D53C214D-6861-48BD-9EF6-5A3E621F06C0}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "CodePad.Client", "CodePad.Client\CodePad.Client.esproj", "{4632AF47-6C5F-4F3A-847E-B0C5A5B44DF4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{114699BA-E754-4243-B769-8E8501C67E7B}"
+	ProjectSection(SolutionItems) = preProject
+		component.md = component.md
+		controller.md = controller.md
+		feature.md = feature.md
+		gen.cmd = gen.cmd
+		github-copilot.txt = github-copilot.txt
+		http-tests.md = http-tests.md
+		readme.md = readme.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{21E1E6FD-5CC5-4A50-A894-B7ABE85DDFDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21E1E6FD-5CC5-4A50-A894-B7ABE85DDFDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21E1E6FD-5CC5-4A50-A894-B7ABE85DDFDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21E1E6FD-5CC5-4A50-A894-B7ABE85DDFDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DB03D5D-B183-46DC-94C8-925A55221BCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DB03D5D-B183-46DC-94C8-925A55221BCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DB03D5D-B183-46DC-94C8-925A55221BCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DB03D5D-B183-46DC-94C8-925A55221BCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D53C214D-6861-48BD-9EF6-5A3E621F06C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D53C214D-6861-48BD-9EF6-5A3E621F06C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D53C214D-6861-48BD-9EF6-5A3E621F06C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D53C214D-6861-48BD-9EF6-5A3E621F06C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4632AF47-6C5F-4F3A-847E-B0C5A5B44DF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4632AF47-6C5F-4F3A-847E-B0C5A5B44DF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4632AF47-6C5F-4F3A-847E-B0C5A5B44DF4}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4632AF47-6C5F-4F3A-847E-B0C5A5B44DF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4632AF47-6C5F-4F3A-847E-B0C5A5B44DF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4632AF47-6C5F-4F3A-847E-B0C5A5B44DF4}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ACF5E13D-4446-4286-8BF8-C77B53BE35D4}
+	EndGlobalSection
+EndGlobal

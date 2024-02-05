@@ -1,0 +1,9 @@
+@hostname=localhost
+@port=9996
+POST https://{{hostname}}:{{port}}/api/FormatTemplates/format
+Content-Type: application/json
+
+{
+    "Source": "One,Two,Three",
+    "Format": "{#},{2}"
+}

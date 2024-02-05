@@ -1,0 +1,1 @@
+.\\..\\tools\\ClientGenerator.exe .\\bin\\Debug\\net8.0\\CodePad.Server.dll Typescript \\CodePad.Client\\src\\clients
