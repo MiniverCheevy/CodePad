@@ -14,6 +14,10 @@ export class FormatCommand {
      source? : string
 }
 
+export class SortedDistinctListCommand {
+     text? : string
+}
+
 export class FileRow {
      fileType? : FileType
      name? : string
@@ -28,6 +32,11 @@ export enum FileType {
      DelimitedSchema = 3,
 }
 
+export class KeyValuePairOfstringstring {
+     key? : string
+     value? : string
+}
+
 export class GetAllQuery {
 }
 
@@ -35,10 +44,18 @@ export class FormatResult {
      data? : string
      isOk? : boolean
      message? : string
+     details? : KeyValuePairOfstringstring[]
 }
 
 export class GetAllResult {
      fileRows? : FileRow[]
+}
+
+export class SortedDistinctListResult {
+     text? : string
+     isOk? : boolean
+     message? : string
+     details? : KeyValuePairOfstringstring[]
 }
 
 export class WeatherForecast {

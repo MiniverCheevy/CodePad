@@ -9,7 +9,7 @@ class RestServicePrototype {
                     requestInit
                 )
                 .then((r) => { return restRequest.responseHandler.returnSuccess(r) })
-                .catch((e) => { return restRequest.responseHandler.returnFailure(e) });
+                //.catch((e) => { return restRequest.responseHandler.returnFailure(e) });
     }
 
     public buildGetRequest = async (restRequest:RestRequest): Promise<any> => {        

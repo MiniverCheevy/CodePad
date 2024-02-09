@@ -31,6 +31,7 @@
 - The controller should have a single method that returns Task<T> where T is the result of the feature.
 - The return type of the controller method should not contain ActionResult or IActionResult.
 - The parameter of the controller method should use the [FromBody] attribute for Post and Put and [FromQuery] for Get and Delete
+- The method name of the controller method should contain the Http Verb, Get, GetAll, Post, Put, Patch and Delete are acceptable names.
 
 ## Code Style
 

@@ -43,6 +43,7 @@ public class Format
                     });
 
                 builder.AppendLine(formatter.Execute());
+                rowNumber++;
             }
 
             return Task.FromResult(new Result { Data = builder.ToString() });
@@ -61,7 +62,7 @@ public class FormatController : ControllerBase
     }
 
     [HttpPost]
-    public Task<Format.Result> Post([FromBody] Format.Command command)
+    public Task<Format.Result> Format([FromBody] Format.Command command)
     {
         return _mediator.Send(command);
     }

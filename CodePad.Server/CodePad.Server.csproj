@@ -11,9 +11,6 @@
 	<JsonSerializerIsReflectionEnabledByDefault>true</JsonSerializerIsReflectionEnabledByDefault>
   </PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="Features\Templates\FormatTemplates\GetAll.cs.old" />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="FastMember" Version="1.5.0" />

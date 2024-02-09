@@ -2,7 +2,7 @@
 // This class is for global settings each client will have a custom request handler for api specific settings, such as base url
 
 import { RestRequest } from "./";
-
+import { MessengerService } from "./"
 export class RequestHandler {
     getAuthToken() {
         //Get auth token from wherever it's stored;
@@ -11,7 +11,7 @@ export class RequestHandler {
     updateUrl(url: string) {
         //default to your dev environment and then pull environment specific urls based on build
         //like process.env.MyApi_ENDPOINT
-        return `https://localhost:5001/${url}`;
+        return `https://localhost:9996/${url}`;
     }
     getHeaders(): Record<string, string> {
         const authToken = this.getAuthToken();
@@ -23,17 +23,19 @@ export class RequestHandler {
         };
     }
     getRequestInit(restRequest: RestRequest) {
+        MessengerService.incrementHttpRequestCounter();
         if (restRequest.verb == "GET" || restRequest.verb == "DELETE")
             return this.getUrlRequest(restRequest);
         else
             return this.getBodyRequest(restRequest);
     }
     getUrlRequest(restRequest: RestRequest): RequestInit {
+        
         const headers = this.getHeaders();
         return {
             mode: 'cors',
             method: restRequest.verb,
-            credentials: 'include',
+            //credentials: 'include',
             headers: headers
         } as RequestInit;
     }
@@ -42,7 +44,7 @@ export class RequestHandler {
         return {
             mode: 'cors',
             method: restRequest.verb,
-            credentials: 'include',
+            //credentials: 'include',
             headers: headers,
             body: JSON.stringify(restRequest.request)
         } as RequestInit;

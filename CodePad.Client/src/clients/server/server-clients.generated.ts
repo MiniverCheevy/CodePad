@@ -16,8 +16,8 @@ import { RestRequest,RestService } from '../';
 
 
 export class FormatClient {
-public static Post (command: models.FormatCommand) : Promise<models.FormatResult> {
-    const url = `api/FormatTemplates/format/`;
+public static Format (command: models.FormatCommand) : Promise<models.FormatResult> {
+    const url = `api/FormatTemplates/format`;
     const restRequest:RestRequest = { 
         url:url,
         verb: 'POST',
@@ -32,7 +32,7 @@ public static Post (command: models.FormatCommand) : Promise<models.FormatResult
 }
 export class FormatTemplateGetAllClient {
 public static GetAll (query: models.GetAllQuery) : Promise<models.GetAllResult> {
-    const url = `api/FormatTemplates/`;
+    const url = `api/FormatTemplates`;
     const restRequest:RestRequest = { 
         url:url,
         verb: 'GET',
@@ -45,9 +45,24 @@ public static GetAll (query: models.GetAllQuery) : Promise<models.GetAllResult> 
 }
 
 }
+export class SortedDistinctListClient {
+public static Clean (command: models.SortedDistinctListCommand) : Promise<models.SortedDistinctListResult> {
+    const url = `api/FormatTemplates/SortedDistinctList`;
+    const restRequest:RestRequest = { 
+        url:url,
+        verb: 'POST',
+        request:command,
+        requestHandler: new  ServerRequestHandler(),
+        responseHandler: new ServerResponseHandler()
+    };
+    
+   return RestService.buildPostRequest(restRequest);
+}
+
+}
 export class WeatherForecastClient {
 public static Get () : Promise<models.WeatherForecast[]> {
-    const url = `WeatherForecast/`;
+    const url = `WeatherForecast`;
     const restRequest:RestRequest = { 
         url:url,
         verb: 'GET',

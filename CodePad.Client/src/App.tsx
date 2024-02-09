@@ -1,10 +1,14 @@
+import './assets/sass/materialize.scss';
+import './app.css';
+import 'toastr/build/toastr.min.css';
+
 import { useState } from 'react';
 import './App.css';
 import { Tabs } from './components/';
 import * as React from 'react';
 import { FormatTemplate } from "./features/templates/FormatTemplate";
-import './assets/sass/materialize.scss';
-import './app.css';
+import { Header } from './features/messaging/Header';
+
 function App() {
 
     //const fetchWeatherForecast = () => {
@@ -23,8 +27,9 @@ function App() {
     //        .then((msg) => setResult(msg));
     //};
     return (
+
         <div className='App' >
-           
+            <Header></Header>
 
             <Tabs
                 tabs={[
@@ -33,7 +38,7 @@ function App() {
                     { title: "Tab 3", active: true, content: <div></div> },
                 ]}
             />
-        </div>        
+        </div>
     );
 }
 

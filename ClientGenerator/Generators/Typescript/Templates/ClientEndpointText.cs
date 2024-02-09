@@ -66,7 +66,7 @@ namespace ClientGenerator.Generators.Typescript.Templates
         public override string ToString()
         {
 
-            return $@"public static {endpoint.Name} ({GetRequestText()}) : Promise<{returnTypeName}> {{
+            return $@"public static {endpoint.Method?.Name ?? endpoint.Name} ({GetRequestText()}) : Promise<{returnTypeName}> {{
     const url = `{GetUrl()}`;
     const restRequest:RestRequest = {{ 
         url:url,
@@ -85,7 +85,7 @@ namespace ClientGenerator.Generators.Typescript.Templates
             var hasSingleScalarValue = endpoint.HasOneParameter && endpoint.AllParamaters.First().Type.IsScalar();
             var pattern = hasSingleScalarValue ? "${" : "${request.";
             return endpoint.RouteFragment.Replace("[controller]", endpoint.Api.ControllerName)
-                .Replace("{", pattern);
+                .Replace("{", pattern).TrimEnd('/');
         }
     }
 }
